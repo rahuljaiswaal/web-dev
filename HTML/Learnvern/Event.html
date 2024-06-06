@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event attibutes</title>
+    <script type="text/javascript">
+        function changeBackground(){
+            document.body.style.background="yellow";
+        }
+        function changeBorder(){
+            document.body.style.border ="10px solid"
+        }
+        function changeBackgroundSubmit(){
+            alert();
+        }
+    </script>
+</head>
+<body>
+    <form action="" onreset="changeBackground()" onsubmit="changeBackgroundSubmit()">
+        <label for="">first name</label>
+        <input type="text" name="First name" onblur="changeBackground()">
+        <br>
+        <label for="">last name</label>
+        <input type="text" name="last name" onchange="changeBackground()">
+        <br>
+        <label for="">onfocus</label>
+        <input type="text" name="last name" onfocus="changeBackground()">
+        <br>
+        <label for="">oninput</label>
+        <input type="text" name="last name" oninput="changeBorder()">
+        <br>
+        <label for="">email oninvalid</label>
+        <input type="email" name="email" oninvalid="changeBorder()"> <br>
+
+        <input type="reset" name="reset" >
+        <br>
+        <input type="submit" name="submit">
+    </form>
+</body>
+</html>

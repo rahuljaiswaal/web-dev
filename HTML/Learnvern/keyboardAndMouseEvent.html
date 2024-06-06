@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keyboard and mouse event</title>
+    <script>
+        function keydown(){
+            document.body.style.background="yellow";
+        }
+        function keyPress(){
+            document.body.style.background="lightgreen";
+        }
+        function keyUp(){
+            document.body.style.background="cyan";
+        }
+        function myfunction(){
+            alert("Button is clicked");
+        }
+        function mouseoverfunction(){
+            document.body.style.background="cyan";
+        }
+        function mouseoutfunction(){
+            document.body.style.background="white";
+        }
+        function mouseupfunction(){
+            document.body.style.background="lightblue";
+        }
+        
+    </script>
+</head>
+<body>
+    <!-- keyboard event -->
+    <form action="">
+        <label for="">first name : </label>
+        <input type="text" name="first name" onkeydown="keydown()"> <br><br>
+        <label for="">last name : </label>
+        <input type="text" name="last name" onkeypress="keyPress()"> <br><br>
+        <label for="">pat name : </label>
+        <input type="text" name="pat name" onkeyup="keyUp()"> <br><br>        
+    </form>
+    <!-- Mouse Event -->
+    <form action="">
+        <br>
+        <button onclick="myfunction()">
+            click me!
+        </button>
+        <br>
+        <button ondblclick="myfunction()">
+            click me!
+        </button> <br>
+        <button onmousedown="myfunction()">
+            click me!
+        </button> <br>
+        <button onmouseup="mouseupfunction()">
+            click me!
+        </button> <br>
+        <label for="">last name : </label>
+        <input type="text" name="last name" onmousedown="myfunction()"> <br><br>
+        <label for="">pat name : </label>
+        <input type="text" name="pat name" onmousemove="mouseoverfunction()" onmouseout="mouseoutfunction()" > <br><br>        
+    </form>
+</body>
+</html>
