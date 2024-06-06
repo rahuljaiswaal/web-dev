@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> example of pseudo selector </title>
+    <style>
+    .background-lightgreen{
+        background-color: aqua;
+        padding: 10px;
+        text-align: center;
+    }
+    .background-lightgreen:hover{
+        background-color: brown;
+        color: white;
+    }
+    .background-anchor{
+        background-color: white;
+        text-align: center;
+    }
+    .background-anchor a:active{
+        color: green;
+    }
+    .background-anchor a:visited{
+        color: yellow;
+    }
+    #visit a:visited{
+        color: yellow;
+    }
+    p:lang(fr){
+        color: blue;
+    }
+    input:focus{
+        border: 10px solid;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class="background-lightgreen">
+        <p>This is the div tag.</p>
+    </div>
+
+    <div class="background-anchor">
+        <a href="https://www.mmumullana.org/" target="_blank">mmdu website link</a>
+    </div>
+
+    <div id="visit">
+        <a href="https://www.mmumullana.org/" target="_blank">mmdu website link</a>
+    </div>
+
+    <p>this p tag is without  lang attribute</p> <br>
+    <p lang="fr">this p tag is with lang attribute</p>
+
+    <input type="text" name="first name" placeholder="first name">
+
+    
+</body>
+</html>

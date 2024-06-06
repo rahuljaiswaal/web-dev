@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo  element</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        h1::first-letter{
+            font-family: Lucida Calligraphy;
+            font-size: 3cm;
+            color: red;
+            text-shadow: 5px 8px 9px green;
+        }
+        h1{
+            color: blue;
+        }
+        p::first-line{
+            color: blue;
+        }
+        h3::before{
+            content: "hello king";
+            color:brown
+        }
+        h4::after{
+            content: "hello virat";
+            color:brown
+        }
+        h2::selection{
+            color:red;
+            background-color: yellow;
+        }
+        #curvedarrow{
+            margin: 0 auto;
+            position: relative;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-right: 10px solid red;
+            transform: rotate(10deg);
+        }
+        #curvedarrow::after{
+            content: "";
+            position: absolute;
+            border: 0 solid transparent;
+            border-top: 3px solid red;
+            border-radius: 20px 0 0;
+            top: -12px;
+            left: -9px;
+            width: 12px;
+            height: 12px;
+            transform: rotate(45deg);
+        }
+    </style>
+</head>
+<body>
+    <p>wow it is so nice ::first line</p>
+    <h1>welcome to learnvern</h1>
+    <h2>this is an example of ::first letter pseudo</h2>
+    <h3>wow so hello all ::before</h3>
+    <h4>wow so hello all ::after</h4>
+    <div id="curvedarrow"></div>
+</body>
+</html>
